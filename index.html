@@ -1068,13 +1068,14 @@
         }
 
         .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display: flex;
+            justify-content: center;
             gap: 2rem;
             margin-top: 3rem;
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
+            flex-wrap: wrap;
         }
 
         .product-card {
@@ -1103,17 +1104,12 @@
 
         .product-card:nth-child(2) {
             animation-delay: 0.4s;
-            background: linear-gradient(135deg, rgba(255, 251, 235, 0.9), rgba(254, 243, 199, 0.8));
+            background: linear-gradient(135deg, rgba(239, 246, 255, 0.9), rgba(219, 234, 254, 0.8));
         }
 
         .product-card:nth-child(3) {
             animation-delay: 0.5s;
-            background: linear-gradient(135deg, rgba(239, 246, 255, 0.9), rgba(219, 234, 254, 0.8));
-        }
-
-        .product-card:nth-child(4) {
-            animation-delay: 0.6s;
-            background: linear-gradient(135deg, rgba(254, 242, 242, 0.9), rgba(254, 226, 226, 0.8));
+            background: linear-gradient(135deg, rgba(248, 250, 252, 0.9), rgba(241, 245, 249, 0.8));
         }
 
         .product-card:hover {
@@ -1135,19 +1131,15 @@
         }
 
         .product-card:nth-child(1) .product-icon-container {
-            background: linear-gradient(135deg, #E53E3E, #C53030);
+            background: linear-gradient(135deg, #E7000B, #C3060A);
         }
 
         .product-card:nth-child(2) .product-icon-container {
-            background: linear-gradient(135deg, #D69E2E, #B7791F);
-        }
-
-        .product-card:nth-child(3) .product-icon-container {
             background: linear-gradient(135deg, #805AD5, #6B46C1);
         }
 
-        .product-card:nth-child(4) .product-icon-container {
-            background: linear-gradient(135deg, #E53E3E, #C53030);
+        .product-card:nth-child(3) .product-icon-container {
+            background: linear-gradient(135deg, #1E3A5F, #4A6FA5);
         }
 
         .product-card:hover .product-icon-container {
@@ -1155,11 +1147,23 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .product-icon-container svg,
-        .product-icon-container img {
+        .product-card:nth-child(1) .product-icon-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.5rem;
+        }
+
+        .product-icon-container svg {
             width: 50px;
             height: 50px;
             filter: brightness(0) invert(1);
+        }
+
+        .product-icon-container img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
         }
 
         .product-name {
@@ -1187,7 +1191,7 @@
             gap: 0.5rem;
             padding: 0;
             background: transparent;
-            color: #E53E3E;
+            color: #E7000B;
             text-decoration: none;
             border-radius: 0;
             font-size: 0.95rem;
@@ -1202,68 +1206,52 @@
         .product-cta::after {
             content: '▶';
             font-size: 0.8rem;
-            color: #E53E3E;
+            color: #E7000B;
             margin-left: 0.25rem;
             transition: all 0.3s ease;
         }
 
         .product-cta:hover {
-            color: #C53030;
+            color: #C3060A;
             transform: none;
             box-shadow: none;
         }
 
         .product-cta:hover::after {
-            color: #C53030;
+            color: #C3060A;
             transform: translateX(3px);
         }
 
         .product-card:nth-child(2) .product-cta {
-            color: #D69E2E;
+            color: #805AD5;
         }
 
         .product-card:nth-child(2) .product-cta::after {
-            color: #D69E2E;
+            color: #805AD5;
         }
 
         .product-card:nth-child(2) .product-cta:hover {
-            color: #B7791F;
+            color: #6B46C1;
         }
 
         .product-card:nth-child(2) .product-cta:hover::after {
-            color: #B7791F;
+            color: #6B46C1;
         }
 
         .product-card:nth-child(3) .product-cta {
-            color: #805AD5;
+            color: #1E3A5F;
         }
 
         .product-card:nth-child(3) .product-cta::after {
-            color: #805AD5;
+            color: #1E3A5F;
         }
 
         .product-card:nth-child(3) .product-cta:hover {
-            color: #6B46C1;
+            color: #4A6FA5;
         }
 
         .product-card:nth-child(3) .product-cta:hover::after {
-            color: #6B46C1;
-        }
-
-        .product-card:nth-child(4) .product-cta {
-            color: #E53E3E;
-        }
-
-        .product-card:nth-child(4) .product-cta::after {
-            color: #E53E3E;
-        }
-
-        .product-card:nth-child(4) .product-cta:hover {
-            color: #C53030;
-        }
-
-        .product-card:nth-child(4) .product-cta:hover::after {
-            color: #C53030;
+            color: #4A6FA5;
         }
 
         .product-card.coming-soon .product-cta {
@@ -1287,7 +1275,7 @@
 
         @media (max-width: 1200px) {
             .products-grid {
-                grid-template-columns: repeat(2, 1fr);
+                justify-content: center;
                 gap: 2rem;
             }
         }
@@ -1306,11 +1294,26 @@
             }
 
             .products-grid {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
                 gap: 1.5rem;
+                padding: 0 1rem;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                /* Firefox */
+                justify-content: flex-start;
+            }
+
+            .products-grid::-webkit-scrollbar {
+                display: none;
+                /* Chrome, Safari, Edge */
             }
 
             .product-card {
+                flex: 0 0 280px;
+                scroll-snap-align: center;
                 padding: 2rem 1.5rem;
                 min-height: 300px;
             }
@@ -1320,14 +1323,27 @@
                 height: 80px;
             }
 
-            .product-icon-container svg,
+            .product-icon-container svg {
+                width: 40px;
+                height: 40px;
+                filter: brightness(0) invert(1);
+            }
+
             .product-icon-container img {
                 width: 40px;
                 height: 40px;
+                object-fit: contain;
             }
 
             .product-name {
                 font-size: 1.3rem;
+            }
+
+            .product-card:nth-child(1) .product-icon-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1.2rem;
             }
         }
 
@@ -1341,6 +1357,7 @@
             }
 
             .product-card {
+                flex: 0 0 260px;
                 padding: 1.5rem 1rem;
                 min-height: 280px;
             }
@@ -1351,10 +1368,16 @@
                 margin-bottom: 1rem;
             }
 
-            .product-icon-container svg,
+            .product-icon-container svg {
+                width: 35px;
+                height: 35px;
+                filter: brightness(0) invert(1);
+            }
+
             .product-icon-container img {
                 width: 35px;
                 height: 35px;
+                object-fit: contain;
             }
 
             .product-name {
@@ -1363,6 +1386,13 @@
 
             .product-description {
                 font-size: 0.9rem;
+            }
+
+            .product-card:nth-child(1) .product-icon-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1rem;
             }
         }
     </style>
@@ -1452,8 +1482,7 @@
                 <div class="founders-grid">
                     <div class="founder-card">
                         <div class="founder-photo-container">
-                            <img src="https://billit.in/Aadith.jpeg"
-                                alt="Aadith Gino" class="founder-photo">
+                            <img src="https://billit.in/Aadith.jpeg" alt="Aadith Gino" class="founder-photo">
                         </div>
                         <h3 class="founder-name">Aadith Gino</h3>
                         <p class="founder-title">CEO & Co-Founder<br>Leading with vision to transform business
@@ -1468,8 +1497,7 @@
                     </div>
                     <div class="founder-card">
                         <div class="founder-photo-container">
-                            <img src="	https://billit.in/Arjun.jpeg"
-                                alt="Arjun CS" class="founder-photo">
+                            <img src="	https://billit.in/Arjun.jpeg" alt="Arjun CS" class="founder-photo">
                         </div>
                         <h3 class="founder-name">Arjun CS</h3>
                         <p class="founder-title">CTO & Co-Founder<br>Driving technological innovation</p>
@@ -1483,8 +1511,7 @@
                     </div>
                     <div class="founder-card">
                         <div class="founder-photo-container">
-                            <img src="https://billit.in/Sachu.jpeg"
-                                alt="Sachu Sudhish" class="founder-photo">
+                            <img src="https://billit.in/Sachu.jpeg" alt="Sachu Sudhish" class="founder-photo">
                         </div>
                         <h3 class="founder-name">Sachu Sudhish</h3>
                         <p class="founder-title">COO & Co-Founder<br>Streamlining operations for growth</p>
@@ -1513,46 +1540,39 @@
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-icon-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                        </svg>
+                        <img src="https://billit-s3.s3.ap-south-1.amazonaws.com/GroQuik/billit+square.png"
+                            alt="Billit Restaurant" class="product-icon">
                     </div>
-                    <h3 class="product-name">zomato</h3>
-                    <p class="product-description">Get the app now to start ordering your favorite dishes!</p>
+                    <h3 class="product-name">Billit Restaurant</h3>
+                    <p class="product-description">A comprehensive solution to streamline restaurant operations, from
+                        order management to billing.</p>
                     <a href="#contact" class="product-cta">Check it out</a>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card coming-soon">
                     <div class="product-icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                         </svg>
                     </div>
-                    <h3 class="product-name">blinkit</h3>
-                    <p class="product-description">Choose from 10,000+ products & get them delivered in minutes</p>
-                    <a href="#contact" class="product-cta">Check it out</a>
+                    <h3 class="product-name">Billit Offline</h3>
+                    <p class="product-description">A robust offline solution for businesses to manage operations
+                        seamlessly without internet connectivity.</p>
+                    <a href="#contact" class="product-cta">Coming Soon</a>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card coming-soon">
                     <div class="product-icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                         </svg>
                     </div>
-                    <h3 class="product-name">district</h3>
-                    <p class="product-description">The best of events, movies, dining, and everything you love!</p>
-                    <a href="#contact" class="product-cta">Check it out</a>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                        </svg>
-                    </div>
-                    <h3 class="product-name">hyperpure</h3>
-                    <p class="product-description">Offering complete supply chain solution for your restaurant</p>
-                    <a href="#contact" class="product-cta">Check it out</a>
+                    <h3 class="product-name">More to Come</h3>
+                    <p class="product-description">Exciting new products in development to empower businesses across
+                        various industries.</p>
+                    <a href="#contact" class="product-cta">Stay Tuned</a>
                 </div>
             </div>
         </div>
