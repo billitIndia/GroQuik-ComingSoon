@@ -1680,6 +1680,266 @@
                 transform: translateY(0);
             }
         }
+
+        /* Testimonials Section Styles */
+        .testimonials-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            position: relative;
+        }
+
+        .testimonials-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .testimonials-headline {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1E3A5F;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .testimonials-headline::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #1E3A5F, #4A6FA5);
+            display: block;
+            margin: 1.5rem auto;
+            border-radius: 2px;
+        }
+
+        .testimonials-subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testimonial-slider-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-slider {
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+
+        .testimonial-slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(30, 58, 95, 0.1);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+
+        .testimonial-rating {
+            display: flex;
+            justify-content: center;
+            gap: 0.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-star {
+            width: 18px;
+            height: 18px;
+            fill: #fbbf24;
+        }
+
+        .testimonial-quote {
+            font-size: 1.3rem;
+            color: #1e293b;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .testimonial-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-author-info {
+            text-align: left;
+        }
+
+        .testimonial-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1E3A5F;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-title {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-company {
+            font-size: 0.85rem;
+            color: #4A6FA5;
+            font-weight: 500;
+        }
+
+        .testimonial-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .testimonial-nav-button {
+            background: #1E3A5F;
+            border: none;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-nav-button:hover {
+            background: #4A6FA5;
+            transform: translateY(-2px);
+        }
+
+        .testimonial-nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .testimonial-nav-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .testimonials-dots {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .testimonial-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .testimonial-dot.active {
+            background: #1E3A5F;
+            transform: scale(1.2);
+        }
+
+        .testimonial-dot:hover {
+            background: #4A6FA5;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-section {
+                padding: 3rem 1rem;
+            }
+
+            .testimonials-headline {
+                font-size: 2.5rem;
+            }
+
+            .testimonial-card {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .testimonial-quote {
+                font-size: 1.1rem;
+            }
+
+            .testimonial-author {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.75rem;
+            }
+
+            .testimonial-author-info {
+                text-align: center;
+            }
+
+            .testimonial-navigation {
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .testimonial-nav-button {
+                width: 40px;
+                height: 40px;
+            }
+
+            .testimonial-nav-button svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-headline {
+                font-size: 2rem;
+            }
+
+            .testimonial-card {
+                padding: 2rem 1.25rem;
+            }
+
+            .testimonial-quote {
+                font-size: 1rem;
+            }
+
+            .testimonial-photo {
+                width: 50px;
+                height: 50px;
+            }
+        }
     </style>
 </head>
 
@@ -1695,6 +1955,7 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#products" class="nav-link">Products</a>
                 <a href="#why-us" class="nav-link">Why Us</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
                 <a href="#vision" class="nav-link">Our Vision</a>
                 <a href="#contact" class="cta-header">Contact Us</a>
             </nav>
@@ -1707,6 +1968,7 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#products" class="nav-link">Products</a>
                 <a href="#why-us" class="nav-link">Why Us</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
                 <a href="#vision" class="nav-link">Our Vision</a>
                 <a href="#contact" class="cta-header">Contact Us</a>
             </nav>
@@ -1757,9 +2019,10 @@
                     real-world business problems through intuitive software products. Founded in 2023, we are proud to
                     be a
                     registered Indian private limited company.</p>
-                <div class="about-vision">Our Vision: To build reliable, affordable software tools that empower
+                <!-- <div class="about-vision" id="vision">Our Vision: To build reliable, affordable software tools that
+                    empower
                     businesses
-                    across India.</div>
+                    across India.</div> -->
             </div>
 
             <div class="founders-section">
@@ -1966,6 +2229,160 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="testimonials-content">
+            <div class="testimonials-header">
+                <h2 class="testimonials-headline">Brands That Believe In Us</h2>
+                <p class="testimonials-subtitle">See what our satisfied clients have to say about their experience with
+                    GroQuik</p>
+            </div>
+            <div class="testimonial-slider-container">
+                <div class="testimonial-slider">
+                    <div class="testimonial-slides">
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                </div>
+                                <p class="testimonial-quote">GroQuik's Billit solution transformed our restaurant
+                                    operations completely. The seamless integration and user-friendly interface helped
+                                    us increase efficiency by 40% while reducing order processing time significantly.
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-photo-container">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
+                                            alt="Rajesh Kumar" class="testimonial-photo">
+                                    </div>
+                                    <div class="testimonial-author-info">
+                                        <div class="testimonial-name">Rajesh Kumar</div>
+                                        <div class="testimonial-title">Owner, Spice Garden Restaurant</div>
+                                        <div class="testimonial-company">🇮🇳 Mumbai, India</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                </div>
+                                <p class="testimonial-quote">The team at GroQuik delivered beyond our expectations.
+                                    Their attention to detail and commitment to understanding our business needs
+                                    resulted in a solution that perfectly fits our workflow and enhances our daily
+                                    operations.</p>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-photo-container">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
+                                            alt="Priya Sharma" class="testimonial-photo">
+                                    </div>
+                                    <div class="testimonial-author-info">
+                                        <div class="testimonial-name">Priya Sharma</div>
+                                        <div class="testimonial-title">Operations Manager, Cafe Delight Chain</div>
+                                        <div class="testimonial-company">🇮🇳 Bangalore, India</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    <svg class="testimonial-star" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                </div>
+                                <p class="testimonial-quote">As a bootstrapped startup, we needed an affordable and
+                                    reliable solution. GroQuik provided just that with exceptional value. Their support
+                                    has been outstanding throughout our entire journey with them.</p>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-photo-container">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+                                            alt="Amit Singh" class="testimonial-photo">
+                                    </div>
+                                    <div class="testimonial-author-info">
+                                        <div class="testimonial-name">Amit Singh</div>
+                                        <div class="testimonial-title">Founder & CEO, QuickBites</div>
+                                        <div class="testimonial-company">🇮🇳 Delhi, India</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-navigation">
+                    <button class="testimonial-nav-button" id="testimonial-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                    </button>
+                    <div class="testimonials-dots"></div>
+                    <button class="testimonial-nav-button" id="testimonial-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
         window.addEventListener('load', () => {
             window.scrollTo(0, 0);
@@ -2045,6 +2462,102 @@
 
         for (let i = 0; i < 10; i++) {
             setTimeout(createParticle, i * 200);
+        }
+
+        // Testimonials Slider
+        const slidesContainer = document.querySelector('.testimonial-slides');
+        if (slidesContainer) {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const nextBtn = document.getElementById('testimonial-next');
+            const prevBtn = document.getElementById('testimonial-prev');
+            const dotsContainer = document.querySelector('.testimonials-dots');
+
+            let currentIndex = 0;
+            let slideInterval;
+            let isAnimating = false;
+
+            const setupDots = () => {
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('testimonial-dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => {
+                        if (!isAnimating) {
+                            goToSlide(i);
+                            resetInterval();
+                        }
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+            };
+
+            const updateDots = (index) => {
+                const dots = document.querySelectorAll('.testimonial-dot');
+                dots.forEach(dot => dot.classList.remove('active'));
+                if (dots[index]) {
+                    dots[index].classList.add('active');
+                }
+            };
+
+            const updateButtons = () => {
+                prevBtn.disabled = currentIndex === 0;
+                nextBtn.disabled = currentIndex === slides.length - 1;
+            };
+
+            const goToSlide = (index) => {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                slidesContainer.style.transform = `translateX(${-100 * index}%)`;
+                currentIndex = index;
+                updateDots(index);
+                updateButtons();
+
+                setTimeout(() => {
+                    isAnimating = false;
+                }, 600);
+            };
+
+            const nextSlide = () => {
+                if (!isAnimating) {
+                    const newIndex = (currentIndex + 1) % slides.length;
+                    goToSlide(newIndex);
+                }
+            };
+
+            const prevSlide = () => {
+                if (!isAnimating) {
+                    const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    goToSlide(newIndex);
+                }
+            };
+
+            const resetInterval = () => {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 6000);
+            };
+
+            if (slides.length > 0) {
+                setupDots();
+                updateButtons();
+
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    resetInterval();
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    resetInterval();
+                });
+
+                // Pause autoplay on hover
+                const testimonialSection = document.querySelector('.testimonials-section');
+                testimonialSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
+                testimonialSection.addEventListener('mouseleave', resetInterval);
+
+                resetInterval();
+            }
         }
     </script>
 </body>
