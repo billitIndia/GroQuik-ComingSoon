@@ -444,6 +444,7 @@
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             position: relative;
             overflow: hidden;
+            scroll-margin-top: 150px;
         }
 
         .about-section::before {
@@ -1004,12 +1005,132 @@
             }
         }
 
+        /* Vision Section Styles */
+        .vision-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            position: relative;
+            overflow: hidden;
+            scroll-margin-top: 150px;
+        }
+
+        .vision-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(74, 111, 165, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(30, 58, 95, 0.06) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .vision-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .vision-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .vision-text {
+            color: #1E3A5F;
+        }
+
+        .vision-headline {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #1E3A5F;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            position: relative;
+        }
+
+        .vision-headline::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #1E3A5F, #4A6FA5);
+            display: block;
+            margin: 2rem auto;
+            border-radius: 2px;
+        }
+
+        .vision-description {
+            margin-bottom: 0;
+        }
+
+        .vision-main {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+            color: #1E3A5F;
+            text-align: center;
+        }
+
+        .vision-sub {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #64748b;
+            font-weight: 400;
+            text-align: center;
+        }
+
+
+
+
+
+        @media (max-width: 768px) {
+            .vision-section {
+                padding: 3rem 1rem;
+            }
+
+            .vision-headline {
+                font-size: 2.8rem;
+            }
+
+            .vision-main {
+                font-size: 1.3rem;
+            }
+
+            .vision-sub {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .vision-section {
+                padding: 2rem 1rem;
+            }
+
+            .vision-headline {
+                font-size: 2.2rem;
+            }
+
+            .vision-main {
+                font-size: 1.2rem;
+            }
+
+            .vision-sub {
+                font-size: 0.95rem;
+            }
+        }
+
         /* Products Section Styles */
         .products-section {
             padding: 4rem 2rem;
             background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
             position: relative;
             overflow: hidden;
+            scroll-margin-top: 150px;
         }
 
         .products-section::before {
@@ -1402,6 +1523,7 @@
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             position: relative;
             overflow: hidden;
+            scroll-margin-top: 150px;
         }
 
         .why-choose-us-section::before {
@@ -1612,15 +1734,30 @@
             }
 
             .why-choose-us-grid {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-                max-width: 500px;
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                gap: 1.5rem;
+                padding: 0 1rem;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                /* Firefox */
+                justify-content: flex-start;
+            }
+
+            .why-choose-us-grid::-webkit-scrollbar {
+                display: none;
+                /* Chrome, Safari, Edge */
             }
 
             .why-choose-us-card {
+                flex: 0 0 280px;
+                scroll-snap-align: center;
                 text-align: center;
                 align-items: center;
                 padding: 2rem 1.5rem;
+                min-height: 300px;
             }
 
             .why-choose-us-icon-container {
@@ -1635,7 +1772,7 @@
             .why-choose-us-description {
                 font-size: 0.95rem;
                 text-align: center;
-                max-width: 400px;
+                max-width: 250px;
             }
         }
 
@@ -1645,7 +1782,13 @@
             }
 
             .why-choose-us-grid {
-                gap: 2rem;
+                gap: 1.5rem;
+            }
+
+            .why-choose-us-card {
+                flex: 0 0 260px;
+                padding: 1.5rem 1rem;
+                min-height: 280px;
             }
 
             .why-choose-us-icon-container {
@@ -1665,7 +1808,7 @@
 
             .why-choose-us-description {
                 font-size: 0.9rem;
-                max-width: 300px;
+                max-width: 240px;
             }
         }
 
@@ -1686,6 +1829,7 @@
             padding: 4rem 2rem;
             background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
             position: relative;
+            scroll-margin-top: 150px;
         }
 
         .testimonials-content {
@@ -2368,8 +2512,8 @@
             <p class="hero-subheadline">We're building tools to simplify business operations – starting with the
                 restaurant industry.</p>
             <div class="hero-cta">
-                <a href="#billit" class="cta-button cta-primary">Explore Billit</a>
-                <a href="#contact" class="cta-button cta-secondary">Join Our Mission</a>
+                <a href="https://menu.billit.in" class="cta-button cta-primary">Explore Billit</a>
+                <a href="mailto:groquiksolutions@gmail.com" class="cta-button cta-secondary">Join Our Mission</a>
             </div>
             <div class="highlight-points">
                 <div class="highlight-point">
@@ -2400,7 +2544,7 @@
             <div class="about-header">
                 <h2 class="about-headline">About GroQuik</h2>
                 <p class="about-intro">GroQuik Solutions Pvt Ltd is a technology-driven startup committed to solving
-                    real-world business problems through intuitive software products. Founded in 2023, we are proud to
+                    real-world business problems through intuitive software products. Founded in 2025, we are proud to
                     be a
                     registered Indian private limited company.</p>
                 <!-- <div class="about-vision" id="vision">Our Vision: To build reliable, affordable software tools that
@@ -2460,6 +2604,22 @@
         </div>
     </section>
 
+    <!-- Vision Section -->
+    <section class="vision-section" id="vision">
+        <div class="vision-content">
+            <div class="vision-container">
+                <h2 class="vision-headline">Our Vision</h2>
+                <div class="vision-description">
+                    <p class="vision-main">To build reliable, affordable software tools that empower businesses
+                        across India and beyond.</p>
+                    <p class="vision-sub">We envision a future where every business, regardless of size, has access
+                        to smart technology solutions that streamline operations, enhance customer experiences, and
+                        drive sustainable growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Products Section -->
     <section class="products-section" id="products">
         <div class="products-content">
@@ -2478,7 +2638,7 @@
                     <h3 class="product-name">Billit Restaurant</h3>
                     <p class="product-description">A comprehensive solution to streamline restaurant operations, from
                         order management to billing.</p>
-                    <a href="#contact" class="product-cta">Check it out</a>
+                    <a href="https://menu.billit.in" target="_blank" class="product-cta">Check it out</a>
                 </div>
 
                 <div class="product-card coming-soon">
@@ -2775,18 +2935,22 @@
                             <img src="https://billit-s3.s3.ap-south-1.amazonaws.com/GroQuik/groquik+final.png"
                                 alt="GroQuik Solutions">
                         </div>
-                        <div class="footer-recognition">
+                        <p class="footer-description">GroQuik builds smart, affordable tools that simplify business
+                            across India.</p>
+
+                        <!-- <div class="footer-recognition">
                             <div class="recognition-item">
                                 <img src="https://getlogo.net/wp-content/uploads/2019/12/startup-india-hub-logo-vector.png"
                                     alt="Startup India" class="recognition-logo">
                                 <span>Startup India Recognized</span>
                             </div>
                             <div class="recognition-item">
-                                <img src="https://images.seeklogo.com/logo-png/44/2/kerala-startup-mission-logo-png_seeklogo-448727.png"
+                                <img src="https://images.seeklogo.net/logo-png/44/2/kerala-startup-mission-logo-png_seeklogo-448727.png"
                                     alt="Kerala Startup Mission" class="recognition-logo">
                                 <span>Kerala Startup Mission Supported</span>
                             </div>
-                        </div>
+                        </div> -->
+
                     </div>
 
                     <!-- Company Links -->
@@ -2869,7 +3033,7 @@
                         </div>
                         <div class="contact-details">
                             <strong>Support</strong>
-                            <p>+91 XXXX-XXXXXX</p>
+                            <p>+91 95264 15630</p>
                         </div>
                     </div>
                 </div>
@@ -2910,8 +3074,9 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <div class="footer-copyright">
-                        <p>&copy; 2024 GroQuik Solutions Pvt Ltd. All rights reserved.</p>
-                        <p class="company-info">CIN: U72900KL2023PTC078XXX | Registered in Kerala, India</p>
+                        <p>&copy; <span id="current-year">2025</span> GroQuik Solutions Pvt Ltd. All rights reserved.
+                        </p>
+                        <p class="company-info">CIN: U62011KL2025PTC093835 | Registered in Kerala, India</p>
                     </div>
                 </div>
             </div>
@@ -2927,6 +3092,9 @@
             history.scrollRestoration = 'manual';
         }
         window.scrollTo(0, 0);
+
+        // Set current year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
         const header = document.getElementById('header');
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
