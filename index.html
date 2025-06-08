@@ -1395,6 +1395,291 @@
                 border-radius: 1rem;
             }
         }
+
+        /* Why Choose Us Section Styles */
+        .why-choose-us-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose-us-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(74, 111, 165, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(30, 58, 95, 0.06) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .why-choose-us-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-choose-us-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .why-choose-us-headline {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #1E3A5F;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .why-choose-us-headline::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #1E3A5F, #4A6FA5);
+            display: block;
+            margin: 2rem auto;
+            border-radius: 2px;
+        }
+
+        .why-choose-us-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-choose-us-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.8));
+            border-radius: 1.5rem;
+            padding: 2rem;
+            text-align: left;
+            position: relative;
+            overflow: visible;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            animation: fadeInUp 1s ease-out;
+            animation-fill-mode: both;
+            border: 1px solid rgba(74, 111, 165, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: auto;
+            box-shadow: 0 4px 20px rgba(30, 58, 95, 0.08);
+        }
+
+        .why-choose-us-card:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .why-choose-us-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .why-choose-us-card:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .why-choose-us-card:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .why-choose-us-card:nth-child(5) {
+            animation-delay: 0.7s;
+        }
+
+        .why-choose-us-card:nth-child(6) {
+            animation-delay: 0.8s;
+        }
+
+        .why-choose-us-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(30, 58, 95, 0.15);
+            border-color: rgba(74, 111, 165, 0.2);
+        }
+
+        .why-choose-us-icon-container {
+            width: 60px;
+            height: 60px;
+            margin: 0 0 1.5rem 0;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .why-choose-us-card:nth-child(1) .why-choose-us-icon-container {
+            background: linear-gradient(135deg, #FEE2E2, #FECACA);
+        }
+
+        .why-choose-us-card:nth-child(2) .why-choose-us-icon-container {
+            background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+        }
+
+        .why-choose-us-card:nth-child(3) .why-choose-us-icon-container {
+            background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+        }
+
+        .why-choose-us-card:nth-child(4) .why-choose-us-icon-container {
+            background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+        }
+
+        .why-choose-us-card:nth-child(5) .why-choose-us-icon-container {
+            background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+        }
+
+        .why-choose-us-card:nth-child(6) .why-choose-us-icon-container {
+            background: linear-gradient(135deg, #FECACA, #FCA5A5);
+        }
+
+        .why-choose-us-card:hover .why-choose-us-icon-container {
+            transform: scale(1.05);
+        }
+
+        .why-choose-us-icon-container svg {
+            width: 32px;
+            height: 32px;
+            color: #1E3A5F;
+        }
+
+        .why-choose-us-card:nth-child(1) .why-choose-us-icon-container svg {
+            color: #EF4444;
+        }
+
+        .why-choose-us-card:nth-child(2) .why-choose-us-icon-container svg {
+            color: #3B82F6;
+        }
+
+        .why-choose-us-card:nth-child(3) .why-choose-us-icon-container svg {
+            color: #10B981;
+        }
+
+        .why-choose-us-card:nth-child(4) .why-choose-us-icon-container svg {
+            color: #F59E0B;
+        }
+
+        .why-choose-us-card:nth-child(5) .why-choose-us-icon-container svg {
+            color: #8B5CF6;
+        }
+
+        .why-choose-us-card:nth-child(6) .why-choose-us-icon-container svg {
+            color: #EF4444;
+        }
+
+        .why-choose-us-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1E3A5F;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+            text-transform: none;
+            line-height: 1.3;
+        }
+
+        .why-choose-us-description {
+            font-size: 1rem;
+            color: #64748b;
+            line-height: 1.6;
+            flex-grow: 1;
+            max-width: none;
+            text-align: left;
+        }
+
+        @media (max-width: 1200px) {
+            .why-choose-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.5rem 3rem;
+                max-width: 900px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .why-choose-us-section {
+                padding: 2rem 1rem;
+            }
+
+            .why-choose-us-headline {
+                font-size: 2.8rem;
+            }
+
+            .why-choose-us-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                max-width: 500px;
+            }
+
+            .why-choose-us-card {
+                text-align: center;
+                align-items: center;
+                padding: 2rem 1.5rem;
+            }
+
+            .why-choose-us-icon-container {
+                margin: 0 auto 1.5rem auto;
+            }
+
+            .why-choose-us-title {
+                font-size: 1.3rem;
+                text-align: center;
+            }
+
+            .why-choose-us-description {
+                font-size: 0.95rem;
+                text-align: center;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .why-choose-us-headline {
+                font-size: 2.2rem;
+            }
+
+            .why-choose-us-grid {
+                gap: 2rem;
+            }
+
+            .why-choose-us-icon-container {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 1rem;
+            }
+
+            .why-choose-us-icon-container svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            .why-choose-us-title {
+                font-size: 1.2rem;
+            }
+
+            .why-choose-us-description {
+                font-size: 0.9rem;
+                max-width: 300px;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -1573,6 +1858,109 @@
                     <p class="product-description">Exciting new products in development to empower businesses across
                         various industries.</p>
                     <a href="#contact" class="product-cta">Stay Tuned</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us-section" id="why-us">
+        <div class="why-choose-us-content">
+            <div class="why-choose-us-header">
+                <h2 class="why-choose-us-headline">Why Choose Us?</h2>
+            </div>
+            <div class="why-choose-us-grid">
+                <div class="why-choose-us-card">
+                    <div class="why-choose-us-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24"
+                            id="secure" class="icon glyph">
+                            <path
+                                d="M19.42,3.83,12.24,2h0A.67.67,0,0,0,12,2a.67.67,0,0,0-.2,0h0L4.58,3.83A2,2,0,0,0,3.07,5.92l.42,5.51a12,12,0,0,0,7.24,10.11l.88.38h0a.91.91,0,0,0,.7,0h0l.88-.38a12,12,0,0,0,7.24-10.11l.42-5.51A2,2,0,0,0,19.42,3.83ZM15.71,9.71l-4,4a1,1,0,0,1-1.42,0l-2-2a1,1,0,0,1,1.42-1.42L11,11.59l3.29-3.3a1,1,0,0,1,1.42,1.42Z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3 class="why-choose-us-title">Reliable Solutions</h3>
+                    <p class="why-choose-us-description">Our products are built to be dependable, ensuring your business
+                        runs smoothly.</p>
+                </div>
+                <div class="why-choose-us-card">
+                    <div class="why-choose-us-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true" role="img" class="!text-primary-red-default iconify iconify--fluent"
+                            width="25" height="25" viewBox="0 0 16 16">
+                            <path fill="currentColor"
+                                d="M9 7a2 2 0 1 1-4 0a2 2 0 0 1 4 0M8 7a1 1 0 1 0-2 0a1 1 0 0 0 2 0M1 4.25C1 3.56 1.56 3 2.25 3h9.5c.69 0 1.25.56 1.25 1.25v5.5c0 .69-.56 1.25-1.25 1.25h-9.5C1.56 11 1 10.44 1 9.75zM2.25 4a.25.25 0 0 0-.25.25V5h.5a.5.5 0 0 0 .5-.5V4zM2 9.75c0 .138.112.25.25.25H3v-.5a.5.5 0 0 0-.5-.5H2zm2-.25v.5h6v-.5A1.5 1.5 0 0 1 11.5 8h.5V6h-.5A1.5 1.5 0 0 1 10 4.5V4H4v.5A1.5 1.5 0 0 1 2.5 6H2v2h.5A1.5 1.5 0 0 1 4 9.5m7 .5h.75a.25.25 0 0 0 .25-.25V9h-.5a.5.5 0 0 0-.5.5zm1-5v-.75a.25.25 0 0 0-.25-.25H11v.5a.5.5 0 0 0 .5.5zm-7.5 8a1.5 1.5 0 0 1-1.427-1.036Q3.281 12 3.5 12h8.25A2.25 2.25 0 0 0 14 9.75V5.085A1.5 1.5 0 0 1 15 6.5v3.25A3.25 3.25 0 0 1 11.75 13z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="why-choose-us-title">Affordable Pricing</h3>
+                    <p class="why-choose-us-description">Cost-effective solutions that deliver value without breaking
+                        the bank.</p>
+                </div>
+                <div class="why-choose-us-card">
+                    <div class="why-choose-us-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            fill="currentColor" version="1.1" id="Capa_1" width="800px" height="800px"
+                            viewBox="0 0 420 420" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M314.606,357.373C314.605,357.373,314.605,357.373,314.606,357.373c-8.693,0-17.603-1.004-26.636-2.98H46.729V65.608     h261.426v129.624c6.477-3.025,12.809-5.099,18.956-6.181c0.825-0.146,1.649-0.272,2.472-0.382V32.139     C329.582,14.418,315.164,0,297.441,0h-240c-17.722,0-32.14,14.418-32.14,32.139v355.722c0,17.722,14.418,32.139,32.14,32.139h240     c17.723,0,32.141-14.417,32.141-32.139v-31.519c-2.211,0.305-4.438,0.558-6.681,0.725     C320.171,357.27,317.38,357.373,314.606,357.373z M177.441,396.944c-7.544,0-13.659-6.115-13.659-13.659     c0-7.543,6.115-13.659,13.659-13.659s13.659,6.116,13.659,13.659C191.101,390.829,184.985,396.944,177.441,396.944z" />
+                                        <path
+                                            d="M393.479,269.643c-4.186-22.562-18.546-43.424-26.732-53.854c-11.107-14.149-25.206-19.83-41.9-16.89     c-11.922,2.1-24.878,8.59-38.51,19.293c-9.634,7.563-16.907,15.135-20.124,18.657c-8.085-6.964-30.66-30.226-41.743-43.343     c-5.566-6.587-19.921-20.595-30.631-10.925c-11.529,11.206,5.359,29.516,5.798,30.045l67.749,82.93     c-0.273,0.369-0.58,0.688-0.933,0.961c-6.497,5.104-25.458-4.272-33.11-9.334c-6.997-4.625-18.777-4.588-24.723,0.078     c-2.381,1.87-3.698,4.411-3.714,7.155c-0.02,3.951,2.566,8.036,7.674,12.129c0.056,0.046,0.158,0.138,0.307,0.263     c7.55,6.47,28.028,22.58,55.071,32.496c17.335,6.358,34.224,8.979,50.201,7.791c19.817-1.478,38.287-8.832,54.888-21.864     C390.855,311.247,397.729,292.543,393.479,269.643z" />
+                                        <path
+                                            d="M225.338,127.975c3.351,4.39,9.626,5.232,14.017,1.881c4.392-3.351,5.232-9.626,1.881-14.016     c-25.26-33.092-72.731-39.463-105.823-14.203c-33.091,25.26-39.463,72.733-14.203,105.824c3.351,4.391,9.625,5.232,14.016,1.881     c4.391-3.351,5.233-9.626,1.882-14.017c-18.569-24.326-13.885-59.222,10.44-77.791     C171.873,98.966,206.77,103.649,225.338,127.975z" />
+                                        <path
+                                            d="M181.218,161.646c4.389-3.35,10.685-2.504,14.035,1.883c3.351,4.39,9.626,5.232,14.016,1.881     c4.391-3.351,5.232-9.626,1.88-14.016c-10.041-13.154-28.913-15.688-42.066-5.646c-13.154,10.041-15.687,28.912-5.646,42.067     c3.351,4.39,9.626,5.232,14.017,1.881c4.391-3.351,5.232-9.627,1.881-14.017C175.985,171.292,176.83,164.996,181.218,161.646z" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="why-choose-us-title">Easy to Use</h3>
+                    <p class="why-choose-us-description">Intuitive interfaces designed for seamless user experiences.
+                    </p>
+                </div>
+                <div class="why-choose-us-card">
+                    <div class="why-choose-us-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                        </svg>
+                    </div>
+                    <h3 class="why-choose-us-title">Scalable Systems</h3>
+                    <p class="why-choose-us-description">Grow with confidence—our solutions scale with your business
+                        needs.</p>
+                </div>
+                <div class="why-choose-us-card">
+                    <div class="why-choose-us-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.1 16,12.7V16.2C16,16.8 15.4,17.3 14.8,17.3H9.2C8.6,17.3 8,16.8 8,16.2V12.8C8,12.2 8.6,11.6 9.2,11.6V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,9.5V11.5H13.5V9.5C13.5,8.7 12.8,8.2 12,8.2Z" />
+                        </svg>
+                    </div>
+                    <h3 class="why-choose-us-title">Secure Platform</h3>
+                    <p class="why-choose-us-description">Your data is safe with our robust security measures.</p>
+                </div>
+                <div class="why-choose-us-card">
+                    <div class="why-choose-us-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px"
+                            height="800px" viewBox="0 0 512 512" version="1.1">
+                            <title>support</title>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="support" fill="currentColor" transform="translate(42.666667, 42.666667)">
+                                    <path
+                                        d="M379.734355,174.506667 C373.121022,106.666667 333.014355,-2.13162821e-14 209.067688,-2.13162821e-14 C85.1210217,-2.13162821e-14 45.014355,106.666667 38.4010217,174.506667 C15.2012632,183.311569 -0.101643453,205.585799 0.000508304259,230.4 L0.000508304259,260.266667 C0.000508304259,293.256475 26.7445463,320 59.734355,320 C92.7241638,320 119.467688,293.256475 119.467688,260.266667 L119.467688,230.4 C119.360431,206.121456 104.619564,184.304973 82.134355,175.146667 C86.4010217,135.893333 107.307688,42.6666667 209.067688,42.6666667 C310.827688,42.6666667 331.521022,135.893333 335.787688,175.146667 C313.347976,184.324806 298.68156,206.155851 298.667688,230.4 L298.667688,260.266667 C298.760356,283.199651 311.928618,304.070103 332.587688,314.026667 C323.627688,330.88 300.801022,353.706667 244.694355,360.533333 C233.478863,343.50282 211.780225,336.789048 192.906491,344.509658 C174.032757,352.230268 163.260418,372.226826 167.196286,392.235189 C171.132153,412.243552 188.675885,426.666667 209.067688,426.666667 C225.181549,426.577424 239.870491,417.417465 247.041022,402.986667 C338.561022,392.533333 367.787688,345.386667 376.961022,317.653333 C401.778455,309.61433 418.468885,286.351502 418.134355,260.266667 L418.134355,230.4 C418.23702,205.585799 402.934114,183.311569 379.734355,174.506667 Z M76.8010217,260.266667 C76.8010217,269.692326 69.1600148,277.333333 59.734355,277.333333 C50.3086953,277.333333 42.6676884,269.692326 42.6676884,260.266667 L42.6676884,230.4 C42.6676884,224.302667 45.9205765,218.668499 51.2010216,215.619833 C56.4814667,212.571166 62.9872434,212.571166 68.2676885,215.619833 C73.5481336,218.668499 76.8010217,224.302667 76.8010217,230.4 L76.8010217,260.266667 Z M341.334355,230.4 C341.334355,220.97434 348.975362,213.333333 358.401022,213.333333 C367.826681,213.333333 375.467688,220.97434 375.467688,230.4 L375.467688,260.266667 C375.467688,269.692326 367.826681,277.333333 358.401022,277.333333 C348.975362,277.333333 341.334355,269.692326 341.334355,260.266667 L341.334355,230.4 Z">
+
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="why-choose-us-title">Dedicated Support</h3>
+                    <p class="why-choose-us-description">We're here for you with prompt and reliable customer support.
+                    </p>
                 </div>
             </div>
         </div>
