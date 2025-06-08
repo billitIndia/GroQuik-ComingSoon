@@ -1750,8 +1750,11 @@
             padding: 3rem 2.5rem;
             text-align: center;
             border-radius: 1rem;
-            box-shadow: 0 10px 30px rgba(30, 58, 95, 0.1);
             border: 1px solid rgba(226, 232, 240, 0.5);
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .testimonial-rating {
@@ -1771,12 +1774,15 @@
             font-size: 1.3rem;
             color: #1e293b;
             line-height: 1.6;
-            margin-bottom: 2.5rem;
+            margin-bottom: 0;
             font-weight: 400;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
             font-style: italic;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
         }
 
         .testimonial-author {
@@ -1884,8 +1890,9 @@
                 padding: 3rem 1rem;
             }
 
-            .testimonials-headline {
-                font-size: 2.5rem;
+            .testimonial-card {
+                padding: 2.5rem 1.5rem;
+                min-height: 380px;
             }
 
             .testimonial-card {
@@ -1929,6 +1936,7 @@
 
             .testimonial-card {
                 padding: 2rem 1.25rem;
+                min-height: 350px;
             }
 
             .testimonial-quote {
