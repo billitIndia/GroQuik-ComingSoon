@@ -1940,6 +1940,382 @@
                 height: 50px;
             }
         }
+
+        /* Footer Styles */
+        .footer-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            color: #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(74, 111, 165, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(30, 58, 95, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-top {
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-column h3.footer-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+        }
+
+        .footer-recognition {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .recognition-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0.5rem;
+        }
+
+        .recognition-logo {
+            height: 30px;
+            width: auto;
+        }
+
+        .recognition-item span {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            padding-left: 0.5rem;
+        }
+
+        .footer-middle {
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-contact-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #4A6FA5, #1E3A5F);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .contact-details strong {
+            color: #ffffff;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details p {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .footer-social-apps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .social-section h4,
+        .app-download-section h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-link:hover {
+            background: #4A6FA5;
+            transform: translateY(-2px);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            fill: #cbd5e1;
+        }
+
+        .social-link:hover svg {
+            fill: white;
+        }
+
+        .app-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .app-button img {
+            height: 45px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .app-button:hover img {
+            transform: scale(1.05);
+        }
+
+        .footer-bottom {
+            padding: 1.5rem 2rem;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-copyright p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .company-info {
+            margin-top: 0.25rem !important;
+            font-size: 0.8rem !important;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 2rem;
+            }
+
+            .footer-middle {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-top {
+                padding: 3rem 1rem 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-middle {
+                padding: 2rem 1rem;
+            }
+
+            .footer-bottom {
+                padding: 1.5rem 1rem;
+            }
+
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-bottom-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .app-buttons {
+                align-items: center;
+            }
+
+            .footer-contact-row {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .contact-item {
+                min-width: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-top {
+                padding: 2rem 1rem;
+            }
+
+            .recognition-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .contact-item {
+                flex-direction: row;
+                text-align: left;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+
+            .contact-details {
+                flex: 1;
+            }
+
+            .contact-details strong {
+                font-size: 0.9rem;
+            }
+
+            .contact-details p {
+                font-size: 0.85rem;
+            }
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+            }
+
+            .social-link svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .footer-contact-row {
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -2264,19 +2640,18 @@
                                             d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                     </svg>
                                 </div>
-                                <p class="testimonial-quote">GroQuik's Billit solution transformed our restaurant
-                                    operations completely. The seamless integration and user-friendly interface helped
-                                    us increase efficiency by 40% while reducing order processing time significantly.
+                                <p class="testimonial-quote">'Our orders increased by 40% after implementing billit QR
+                                    ordering. Customers love the contactless experience!
                                 </p>
                                 <div class="testimonial-author">
                                     <div class="testimonial-photo-container">
                                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
-                                            alt="Rajesh Kumar" class="testimonial-photo">
+                                            alt="Gilvin Paul" class="testimonial-photo">
                                     </div>
                                     <div class="testimonial-author-info">
-                                        <div class="testimonial-name">Rajesh Kumar</div>
-                                        <div class="testimonial-title">Owner, Spice Garden Restaurant</div>
-                                        <div class="testimonial-company">🇮🇳 Mumbai, India</div>
+                                        <div class="testimonial-name">Gilvin Paul</div>
+                                        <div class="testimonial-title">Owner, Forwords Library Cafe</div>
+                                        <div class="testimonial-company">🇮🇳 Ernakulam, Kerala</div>
                                     </div>
                                 </div>
                             </div>
@@ -2305,19 +2680,18 @@
                                             d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                     </svg>
                                 </div>
-                                <p class="testimonial-quote">The team at GroQuik delivered beyond our expectations.
-                                    Their attention to detail and commitment to understanding our business needs
-                                    resulted in a solution that perfectly fits our workflow and enhances our daily
-                                    operations.</p>
+                                <p class="testimonial-quote">Managing 5 locations and room service orders became
+                                    effortless. Guests can now order directly from their rooms, improving service
+                                    efficiency.</p>
                                 <div class="testimonial-author">
                                     <div class="testimonial-photo-container">
                                         <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
-                                            alt="Priya Sharma" class="testimonial-photo">
+                                            alt="Jayan" class="testimonial-photo">
                                     </div>
                                     <div class="testimonial-author-info">
-                                        <div class="testimonial-name">Priya Sharma</div>
-                                        <div class="testimonial-title">Operations Manager, Cafe Delight Chain</div>
-                                        <div class="testimonial-company">🇮🇳 Bangalore, India</div>
+                                        <div class="testimonial-name">Jayan</div>
+                                        <div class="testimonial-title">Owner, Yutori</div>
+                                        <div class="testimonial-company">🇮🇳 Ernakulam, Kerala</div>
                                     </div>
                                 </div>
                             </div>
@@ -2346,18 +2720,17 @@
                                             d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                     </svg>
                                 </div>
-                                <p class="testimonial-quote">As a bootstrapped startup, we needed an affordable and
-                                    reliable solution. GroQuik provided just that with exceptional value. Their support
-                                    has been outstanding throughout our entire journey with them.</p>
+                                <p class="testimonial-quote">Our juice shop uses the billit QR menu for quick and easy
+                                    ordering. Customers appreciate the hassle-free, contactless experience!</p>
                                 <div class="testimonial-author">
                                     <div class="testimonial-photo-container">
                                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
-                                            alt="Amit Singh" class="testimonial-photo">
+                                            alt="Samadh" class="testimonial-photo">
                                     </div>
                                     <div class="testimonial-author-info">
-                                        <div class="testimonial-name">Amit Singh</div>
-                                        <div class="testimonial-title">Founder & CEO, QuickBites</div>
-                                        <div class="testimonial-company">🇮🇳 Delhi, India</div>
+                                        <div class="testimonial-name">Samadh</div>
+                                        <div class="testimonial-title">Owner, 99 Juices & Fruits</div>
+                                        <div class="testimonial-company">🇮🇳 Ernakulam, Kerala</div>
                                     </div>
                                 </div>
                             </div>
@@ -2382,6 +2755,160 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-grid">
+                    <!-- Company Info -->
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="https://billit-s3.s3.ap-south-1.amazonaws.com/GroQuik/groquik+final.png"
+                                alt="GroQuik Solutions">
+                        </div>
+                        <div class="footer-recognition">
+                            <div class="recognition-item">
+                                <img src="https://getlogo.net/wp-content/uploads/2019/12/startup-india-hub-logo-vector.png"
+                                    alt="Startup India" class="recognition-logo">
+                                <span>Startup India Recognized</span>
+                            </div>
+                            <div class="recognition-item">
+                                <img src="https://images.seeklogo.com/logo-png/44/2/kerala-startup-mission-logo-png_seeklogo-448727.png"
+                                    alt="Kerala Startup Mission" class="recognition-logo">
+                                <span>Kerala Startup Mission Supported</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Company Links -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">Company</h3>
+                        <ul class="footer-links">
+                            <li><a href="#about">About GroQuik</a></li>
+                            <li><a href="#vision">Our Vision</a></li>
+                            <li><a href="#team">Leadership Team</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Products & Services -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">Products & Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="#billit">Billit - Restaurant POS</a></li>
+                            <li><a href="#business-solutions">Business Solutions</a></li>
+                            <li><a href="#partnerships">Partner With Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support & Resources -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">Support & Resources</h3>
+                        <ul class="footer-links">
+                            <li><a href="#help">Help Center</a></li>
+                            <li><a href="#documentation">Documentation</a></li>
+                            <li><a href="#tutorials">Video Tutorials</a></li>
+                            <li><a href="#contact">Contact Support</a></li>
+                            <li><a href="#training">Training Programs</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal & Policies -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">Legal & Policies</h3>
+                        <ul class="footer-links">
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#terms">Terms of Service</a></li>
+                            <li><a href="#security">Security Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-contact-row">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <strong>Headquarters</strong>
+                            <p>Kochi, Kerala, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <strong>Business Inquiries</strong>
+                            <p>hello@groquik.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <strong>Support</strong>
+                            <p>+91 XXXX-XXXXXX</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-social">
+                    <div class="social-section">
+                        <h4>Connect With Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link linkedin">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link youtube">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 GroQuik Solutions Pvt Ltd. All rights reserved.</p>
+                        <p class="company-info">CIN: U72900KL2023PTC078XXX | Registered in Kerala, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         window.addEventListener('load', () => {
