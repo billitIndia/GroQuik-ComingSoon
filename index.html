@@ -444,7 +444,7 @@
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             position: relative;
             overflow: hidden;
-            scroll-margin-top: 150px;
+            scroll-margin-top: 180px;
         }
 
         .about-section::before {
@@ -1011,7 +1011,7 @@
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             position: relative;
             overflow: hidden;
-            scroll-margin-top: 150px;
+            scroll-margin-top: 180px;
         }
 
         .vision-section::before {
@@ -1130,7 +1130,7 @@
             background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
             position: relative;
             overflow: hidden;
-            scroll-margin-top: 150px;
+            scroll-margin-top: 180px;
         }
 
         .products-section::before {
@@ -1523,7 +1523,7 @@
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             position: relative;
             overflow: hidden;
-            scroll-margin-top: 150px;
+            scroll-margin-top: 180px;
         }
 
         .why-choose-us-section::before {
@@ -1829,7 +1829,7 @@
             padding: 4rem 2rem;
             background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
             position: relative;
-            scroll-margin-top: 150px;
+            scroll-margin-top: 180px;
         }
 
         .testimonials-content {
@@ -2481,10 +2481,10 @@
             </div>
             <nav class="nav" id="nav">
                 <a href="#about" class="nav-link">About</a>
+                <a href="#vision" class="nav-link">Our Vision</a>
                 <a href="#products" class="nav-link">Products</a>
                 <a href="#why-us" class="nav-link">Why Us</a>
                 <a href="#testimonials" class="nav-link">Testimonials</a>
-                <a href="#vision" class="nav-link">Our Vision</a>
                 <a href="https://wa.me/919526415630?text=Hi%20Groquik%2C" target="_blank" class="cta-header">
                     Contact Us
                 </a>
@@ -3132,9 +3132,12 @@
                 if (targetId.startsWith('#')) {
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                        const headerHeight = 90; // Offset for fixed header
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
                         });
                     }
                 }
